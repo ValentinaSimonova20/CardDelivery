@@ -1,4 +1,4 @@
-package com.startandroid.trashstatf;
+package com.startandroid.carddelivery;
 
 public class User {
     private String name, email, pass, phone, surname, passport;

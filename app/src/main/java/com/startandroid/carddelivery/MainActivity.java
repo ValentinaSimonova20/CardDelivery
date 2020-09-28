@@ -1,4 +1,4 @@
-package com.startandroid.trashstatf;
+package com.startandroid.carddelivery;
 //при использовании фрагментов не происходит создание новой страницы. На существующую страницу просто всталяется фрагмент. На одну страницу вставляем вторую страницу
 
 import androidx.annotation.NonNull;

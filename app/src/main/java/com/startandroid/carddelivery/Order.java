@@ -1,4 +1,4 @@
-package com.startandroid.trashstatf;
+package com.startandroid.carddelivery;
 
 public class Order {
     String cardType, cardName, city, street, home, korp, flat, status, entrance;

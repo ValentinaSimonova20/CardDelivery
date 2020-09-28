@@ -1,4 +1,4 @@
-package com.startandroid.trashstatf;
+package com.startandroid.carddelivery;
 
 import org.junit.Test;
 

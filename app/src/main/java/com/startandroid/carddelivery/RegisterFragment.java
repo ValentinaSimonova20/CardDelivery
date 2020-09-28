@@ -1,4 +1,4 @@
-package com.startandroid.trashstatf;
+package com.startandroid.carddelivery;
 
 import android.os.Bundle;
 import android.text.TextUtils;
