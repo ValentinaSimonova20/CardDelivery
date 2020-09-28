@@ -22,15 +22,15 @@ import com.rengwuxian.materialedittext.MaterialEditText;
 
 public class PassFragment extends Fragment {
 
-    DatabaseHelper dbHelper;
+    private DatabaseHelper dbHelper;
 
-    MaterialEditText email;
-    MaterialEditText pass;
-    Button authButton;
-    SharedPreferences loginPref;
+    private MaterialEditText email;
+    private MaterialEditText pass;
+    private Button authButton;
+    private SharedPreferences loginPref;
 
 
-    RelativeLayout root2;
+    private RelativeLayout root2;
 
     @Nullable
     @Override
@@ -66,10 +66,10 @@ public class PassFragment extends Fragment {
                 }
 
 
-                if(dbHelper.authUser(email.getText().toString(),pass.getText().toString())){
+                if(dbHelper.authClient(email.getText().toString(),pass.getText().toString())){
                     Snackbar.make(root2, "Вы авторизовались!", Snackbar.LENGTH_SHORT).show();
 
-                    //запоминаем авторизовавшегося пользователя
+                    // Запоминаем авторизовавшегося пользователя
                     loginPref = getActivity().getSharedPreferences("login", Context.MODE_PRIVATE);
                     SharedPreferences.Editor ed = loginPref.edit();
                     ed.putString("UsersLogin",email.getText().toString());

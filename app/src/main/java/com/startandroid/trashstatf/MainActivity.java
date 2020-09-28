@@ -1,4 +1,5 @@
 package com.startandroid.trashstatf;
+//при использовании фрагментов не происходит создание новой страницы. На существующую страницу просто всталяется фрагмент. На одну страницу вставляем вторую страницу
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -52,23 +53,27 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         //переключатель между фрагментами
         switch (item.getItemId()) {
-            case R.id.nav_addPack:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new AddPackFragment()).commit();
+            case R.id.nav_profile:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new ProfileFragment()).commit();
                 break;
-            case R.id.nav_advice:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new AdviceFragment()).commit();
+            case R.id.nav_catalog:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new CatalogFragment()).commit();
                 break;
-            case R.id.nav_graph:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new GraphFragment()).commit();
+            case R.id.nav_orderCard:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new OrderCardFragment()).commit();
                 break;
             case R.id.nav_pass:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new PassFragment()).commit();
                 break;
             case R.id.nav_stat:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new StatisticsFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new ClientOrdersFragment()).commit();
                 break;
             case R.id.nav_reg:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new RegisterFragment()).commit();
+                break;
+            case R.id.nav_rateapp:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new RateAppFragment()).commit();
+                break;
 
         }
 

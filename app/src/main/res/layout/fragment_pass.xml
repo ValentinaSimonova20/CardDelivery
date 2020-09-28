@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="#FFE6E7"
+    android:background="@color/cardbg"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/root_element2">
 
@@ -19,14 +19,14 @@
             android:layout_marginTop="150dp"
             android:inputType="textEmailAddress"
             android:text=""
-            android:textColor="@color/colorPrimary"
-            android:textColorHint="@color/colorPrimaryDark"
+            android:textColor="@color/Black"
+            android:textColorHint="@color/Black"
             android:textSize="20sp"
 
             app:met_floatingLabel="highlight"
-            app:met_baseColor="#0056d3"
-            app:met_primaryColor="#982360"
-            app:met_textColorHint = "#5a1539"
+            app:met_baseColor="@color/Black"
+            app:met_primaryColor="@color/Black"
+            app:met_textColorHint = "@color/Black"
             app:met_singleLineEllipsis="true"/>
 
         <com.rengwuxian.materialedittext.MaterialEditText
@@ -36,14 +36,14 @@
             android:hint="Введите пароль"
             android:inputType="textPassword"
             android:text=""
-            android:textColor="@color/colorPrimary"
-            android:textColorHint="@color/colorPrimaryDark"
+            android:textColor="@color/Black"
+            android:textColorHint="@color/Black"
             android:textSize="20sp"
 
             app:met_floatingLabel="highlight"
-            app:met_baseColor="#0056d3"
-            app:met_textColorHint = "#5a1539"
-            app:met_primaryColor="#982360"
+            app:met_baseColor="@color/Black"
+            app:met_textColorHint = "@color/Black"
+            app:met_primaryColor="@color/Black"
             app:met_singleLineEllipsis="true"/>
 
 
@@ -52,14 +52,17 @@
 
     <Button
         android:id="@+id/authButton"
-        android:layout_width="wrap_content"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="129dp"
         android:layout_marginTop="382dp"
         android:text="Авторизоваться"
-        android:background="#EBB4E4"/>
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:textColor="@color/cardbg"
+        android:background="@color/green"/>
 
 
 </RelativeLayout>

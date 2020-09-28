@@ -5,28 +5,32 @@
 
     <group android:checkableBehavior="single">
         <item android:id="@+id/nav_stat"
-            android:icon="@drawable/ic_stat_"
-            android:title="Статистика"/>
+            android:icon="@drawable/ic_orders"
+            android:title="Мои заказы"/>
 
-        <item android:id="@+id/nav_graph"
-            android:icon="@drawable/ic_pie_chart"
-            android:title="График"/>
+        <item android:id="@+id/nav_orderCard"
+            android:icon="@drawable/ic_card"
+            android:title="Заказать карту"/>
 
-        <item android:id="@+id/nav_addPack"
-            android:icon="@drawable/ic_addpack"
-            android:title="Добавить упаковку"/>
+        <item android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_account"
+            android:title="Профиль"/>
 
-        <item android:id="@+id/nav_advice"
-            android:icon="@drawable/ic_advice"
-            android:title="Советы"/>
+        <item android:id="@+id/nav_catalog"
+            android:icon="@drawable/ic_catalog"
+            android:title="Каталог карт"/>
 
         <item android:id="@+id/nav_pass"
-            android:icon="@drawable/ic_pass"
+            android:icon="@drawable/ic_reg"
             android:title="Авторизация"/>
 
         <item android:id="@+id/nav_reg"
             android:icon="@drawable/ic_pass"
             android:title="Регистрация"/>
+
+        <item android:id="@+id/nav_rateapp"
+            android:icon="@drawable/ic_rate"
+            android:title="Оценить сервис"/>
 
     </group>
 </menu>

@@ -1,28 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/cardbg"
-    android:id="@+id/root_element">
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/cardbg">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <Spinner
+            android:id="@+id/cardType"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1" />
+
+        <Spinner
+            android:id="@+id/cardName"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1" />
+
         <com.rengwuxian.materialedittext.MaterialEditText
-            android:id="@+id/nameField"
+            android:id="@+id/cityField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Введите имя"
+            android:layout_weight="0"
+            android:hint="Введите город"
             android:inputType="text"
             android:text=""
             android:textColor="@color/Black"
             android:textColorHint="@color/Black"
-            android:textSize="20sp"
 
+            android:textSize="20sp"
             app:met_baseColor="@color/Black"
             app:met_floatingLabel="highlight"
             app:met_primaryColor="@color/Black"
@@ -30,34 +40,14 @@
             app:met_textColorHint="@color/Black" />
 
         <com.rengwuxian.materialedittext.MaterialEditText
-            android:id="@+id/surnameField"
+            android:id="@+id/streetField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Введите фамилию"
+            android:layout_weight="0"
+            android:hint="Введите улицу"
             android:inputType="text"
             android:text=""
             android:textColor="@color/Black"
-            android:textColorHighlight="@color/Black"
-            android:textColorHint="@color/Black"
-
-            android:textColorLink="@color/Black"
-            android:textSize="20sp"
-            app:met_baseColor="@color/Black"
-            app:met_floatingLabel="highlight"
-            app:met_primaryColor="@color/Black"
-            app:met_singleLineEllipsis="true"
-            app:met_textColorHint="@color/Black" />
-
-        <com.rengwuxian.materialedittext.MaterialEditText
-            android:id="@+id/emailField"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Введите Email"
-            android:inputType="textEmailAddress"
-            android:scrollbarThumbHorizontal="@color/Black"
-            android:text=""
-            android:textColor="@color/Black"
-            android:textColorHighlight="@color/Black"
             android:textColorHint="@color/Black"
 
             android:textSize="20sp"
@@ -68,53 +58,16 @@
             app:met_textColorHint="@color/Black" />
 
         <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/homeField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/passField"
-            android:hint="Введите пароль"
-            android:inputType="textPassword"
-            android:text=""
-            android:textColor="@color/Black"
-            android:textColorHint="@color/Black"
-            android:textSize="20sp"
-
-            app:met_floatingLabel="highlight"
-            app:met_baseColor="@color/Black"
-            app:met_textColorHint = "@color/Black"
-            app:met_primaryColor="@color/Black"
-            app:met_singleLineEllipsis="true"/>
-
-        <com.rengwuxian.materialedittext.MaterialEditText
-            android:id="@+id/phoneField"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Введите номер телефона"
-            android:inputType="phone"
-            android:text=""
-            android:textColor="@color/Black"
-            android:textColorHighlight="@color/Black"
-            android:textColorHint="@color/Black"
-
-            android:textColorLink="@color/Black"
-            android:textSize="20sp"
-            app:met_baseColor="@color/Black"
-            app:met_textColorHint = "@color/Black"
-            app:met_floatingLabel="highlight"
-            app:met_primaryColor="@color/Black"
-            app:met_singleLineEllipsis="true" />
-
-        <com.rengwuxian.materialedittext.MaterialEditText
-            android:id="@+id/passportField"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Введите серию и номер паспорта"
+            android:layout_weight="0"
+            android:hint="Введите номер дома"
             android:inputType="text"
             android:text=""
             android:textColor="@color/Black"
-            android:textColorHighlight="@color/Black"
             android:textColorHint="@color/Black"
 
-            android:textColorLink="@color/Black"
             android:textSize="20sp"
             app:met_baseColor="@color/Black"
             app:met_floatingLabel="highlight"
@@ -122,21 +75,70 @@
             app:met_singleLineEllipsis="true"
             app:met_textColorHint="@color/Black" />
 
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/korpField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:hint="Введите корпус дома"
+            android:inputType="text"
+            android:text=""
+            android:textColor="@color/Black"
+            android:textColorHint="@color/Black"
+
+            android:textSize="20sp"
+            app:met_baseColor="@color/Black"
+            app:met_floatingLabel="highlight"
+            app:met_primaryColor="@color/Black"
+            app:met_singleLineEllipsis="true"
+            app:met_textColorHint="@color/Black" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/entranceField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:hint="Введите ваш подъезд"
+            android:inputType="text"
+            android:text=""
+            android:textColor="@color/Black"
+            android:textColorHint="@color/Black"
+
+            android:textSize="20sp"
+            app:met_baseColor="@color/Black"
+            app:met_floatingLabel="highlight"
+            app:met_primaryColor="@color/Black"
+            app:met_singleLineEllipsis="true"
+            app:met_textColorHint="@color/Black" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/flatField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:hint="Введите номер квартиры"
+            android:inputType="text"
+            android:text=""
+            android:textColor="@color/Black"
+            android:textColorHint="@color/Black"
+
+            android:textSize="20sp"
+            app:met_baseColor="@color/Black"
+            app:met_floatingLabel="highlight"
+            app:met_primaryColor="@color/Black"
+            app:met_singleLineEllipsis="true"
+            app:met_textColorHint="@color/Black" />
+
+        <Button
+            android:id="@+id/orderButton"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:background="@color/green"
+            android:textColor="@color/cardbg"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:text="Заказать карту" />
     </LinearLayout>
-
-    <Button
-        android:id="@+id/registerButton"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="543dp"
-        android:background="@color/green"
-        android:textColor="@color/cardbg"
-        android:textStyle="bold"
-        android:textSize="15dp"
-        android:text="Зарегестрироваться" />
-
 
 </RelativeLayout>

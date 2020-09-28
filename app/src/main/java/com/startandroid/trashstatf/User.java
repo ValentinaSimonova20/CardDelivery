@@ -1,16 +1,19 @@
 package com.startandroid.trashstatf;
 
 public class User {
-    public String name, email, pass, phone;
+    private String name, email, pass, phone, surname, passport;
 
     public User(){}
 
 
-    public User(String name, String email, String pass, String phone){
+
+    public User(String name, String email, String pass, String phone, String surname, String passport){
         this.name = name;
         this.email = email;
         this.pass = pass;
         this.phone = phone;
+        this.surname = surname;
+        this.passport = passport;
     }
 
     public String getName(){
@@ -43,6 +46,22 @@ public class User {
 
     public void setPhone(String phone){
         this.phone = phone;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public String getPassport() {
+        return passport;
+    }
+
+    public void setPassport(String passport) {
+        this.passport = passport;
     }
 
 

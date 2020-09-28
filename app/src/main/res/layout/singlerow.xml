@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center_horizontal"
+    app:cardUseCompatPadding="true"
+    android:elevation="4dp"
+    android:layout_margin="5dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="12dp"
+        android:background="@color/cardbg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/displayCardType"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="Card Type"
+            />
+
+        <TextView
+            android:id="@+id/displayCardName"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:layout_marginTop="3dp"
+            android:text="Card Name" />
+
+        <TextView
+            android:id="@+id/displayAddress"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:layout_marginTop="3dp"
+            android:text="Address" />
+
+        <TextView
+            android:id="@+id/displayOrderStatus"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:layout_marginTop="3dp"
+            android:text="Order Status" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

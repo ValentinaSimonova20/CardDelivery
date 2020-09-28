@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment;
 import com.google.android.material.snackbar.Snackbar;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
+
 public class RegisterFragment extends Fragment {
 
     DatabaseHelper dbHelper;
@@ -22,7 +23,9 @@ public class RegisterFragment extends Fragment {
     MaterialEditText email;
     MaterialEditText pass;
     MaterialEditText name;
+    MaterialEditText surname;
     MaterialEditText phone;
+    MaterialEditText passport;
 
     Button registerButton;
 
@@ -45,6 +48,8 @@ public class RegisterFragment extends Fragment {
         pass = getView().findViewById(R.id.passField);
         name = getView().findViewById(R.id.nameField);
         phone = getView().findViewById(R.id.phoneField);
+        surname = getView().findViewById(R.id.surnameField);
+        passport = getView().findViewById(R.id.passportField);
         root = getView().findViewById(R.id.root_element);
 
         registerButton = getView().findViewById(R.id.registerButton);
@@ -66,31 +71,41 @@ public class RegisterFragment extends Fragment {
                     return;
                 }
 
+                if(TextUtils.isEmpty(surname.getText().toString())){
+                    Snackbar.make(root, "Введите вашу фамилию", Snackbar.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if(TextUtils.isEmpty(passport.getText().toString())){
+                    Snackbar.make(root, "Введите ваши пасспортные данные", Snackbar.LENGTH_SHORT).show();
+                    return;
+                }
+
                 if(pass.getText().toString().length() < 5){
-                    Snackbar.make(root, "Введите пароль, который более 5 символов", Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(root, "Введите пароль, длиной более 5 символов", Snackbar.LENGTH_SHORT).show();
                     return;
                 }
 
 
                 //Регистрация пользователя
-
-
-
                 User user = new User();
                 user.setEmail(email.getText().toString());
                 user.setName(name.getText().toString());
                 user.setPass(pass.getText().toString());
                 user.setPhone(phone.getText().toString());
+                user.setSurname(surname.getText().toString());
+                user.setPassport(passport.getText().toString());
+
 
                  //Проверка на то, есть ли пользователь с таким логином в бд
-                if(dbHelper.isUserExists(user.getEmail())){
+                if(dbHelper.isClientExists(user.getEmail())){
                     //Если есть, то не добавляем в таблицу Users
                     Snackbar.make(root,"Данный пользователь уже зарегестрирован! Введите другой email", Snackbar.LENGTH_SHORT).show();
                     return;
                 }
                 else{
                     Snackbar.make(root,"Вы успешно зарегестрировались. Перейдите в пункт меню авторизация для продолжения работы под своей учетной записью.", Snackbar.LENGTH_SHORT).show();
-                    dbHelper.addNewUser(user.getPass(),user.getEmail(),user.getPhone(),user.getName());
+                    dbHelper.addNewUser(user.getPass(),user.getEmail(),user.getPhone(),user.getName(), user.getSurname(), user.getPassport());
                 }
 
 
